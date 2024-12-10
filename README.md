@@ -24,6 +24,8 @@ todo-demo-react
 ├─ README.md
 ├─ src
 │  ├─ apis
+│  ├─ contexts
+│     └─ TodoContext.js
 │  ├─ App.css
 │  ├─ App.jsx
 │  ├─ assets
@@ -74,4 +76,5 @@ todo-demo-react
 ### 12. 팀 자체 피드백 발표
 
 ### 13. 멘토 피드백
+
 # 7week-todo-React-try2
