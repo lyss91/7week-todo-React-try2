@@ -12,6 +12,7 @@ const initTodo = {
   privacy: 0,
 };
 function TodoEdit() {
+  // Context 사용하기
   const { todoList, updateTodo } = useContext(TodoContext);
   // useState 화면 리랜더링
   const [formData, setFormData] = useState(initTodo);

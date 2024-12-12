@@ -12,8 +12,8 @@ const initTodo = {
   privacy: 0,
 };
 function TodoAdd() {
+  // Context 사용하기
   const { addTodo } = useContext(TodoContext);
-
   // useState 화면 리랜더링
   const [formData, setFormData] = useState(initTodo);
   const navigate = useNavigate();

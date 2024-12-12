@@ -10,7 +10,7 @@ const Footer = ({ children }) => {
           resetTodo();
         }}
       >
-        TODO 초기화
+        Todo 초기화
       </button>
       {children}
     </div>

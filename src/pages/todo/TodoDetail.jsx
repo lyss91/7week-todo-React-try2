@@ -3,6 +3,7 @@ import { useNavigate, useSearchParams } from "react-router-dom";
 import { TodoContext } from "../../contexts/TodoContext";
 
 function TodoDetail() {
+  // Context 사용하기
   const { todoList } = useContext(TodoContext);
   // js 로 패스 이동하기
   const navigate = useNavigate();
