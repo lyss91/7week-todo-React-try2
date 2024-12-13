@@ -29,11 +29,17 @@ const Header = () => {
       <Link to={"/member"} style={linkStyle}>
         회원가입
       </Link>
-      <Link to={"/login"} style={linkStyle}>
-        로그인
+      <Link to={"/schedule"} style={linkStyle}>
+        스케쥴
+      </Link>
+      <Link to={"/range"} style={linkStyle}>
+        일정
       </Link>
       <Link to={"/todo"} style={linkStyle}>
         Todo
+      </Link>
+      <Link to={"/login"} style={linkStyle}>
+        로그인
       </Link>
       <button
         onClick={() => {
