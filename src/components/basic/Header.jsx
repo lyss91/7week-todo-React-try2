@@ -35,6 +35,9 @@ const Header = () => {
       <Link to={"/range"} style={linkStyle}>
         일정
       </Link>
+      <Link to={"/full"} style={linkStyle}>
+        스케쥴러
+      </Link>
       <Link to={"/todo"} style={linkStyle}>
         Todo
       </Link>

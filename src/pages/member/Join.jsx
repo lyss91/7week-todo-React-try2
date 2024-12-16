@@ -5,6 +5,9 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 import { useEffect } from "react";
 import { useForm } from "react-hook-form";
+import { postMember } from "./member";
+import { useNavigate } from "react-router-dom";
+
 const ErrorDiv = styled.p`
   width: 100%;
   color: red;
@@ -57,6 +60,8 @@ const formatPhoneNumber = value => {
 };
 
 function Join() {
+  //  5. useNavigate 이용
+  const navigate = useNavigate();
   // register : 입력창을 훅폼에 등록한다.
   // handleSubmt : 입력창에 내용을 입력 후 전송 실행시 처리
   // getValues : 입력된 값 추출하기
@@ -102,10 +107,22 @@ function Join() {
   });
 
   // 전송용 데이터
-  const onSubmit = data => {
-    console.log("전송시 데이터 ", data);
-    const sendData = { ...data, phone: data.phone.replaceAll("-", "") };
-    console.log("전송시 데이터 sendData ", sendData);
+  const onSubmit = async data => {
+    try {
+      // 5. 회원가입시 보낼 데이터
+      const sendData = { ...data, phone: data.phone.replaceAll("-", "") };
+      // 5. axios 연동하기
+      const result = await postMember(sendData);
+      if (result.data) {
+        // 5. 로그인창으로 이동
+        navigate("/login");
+      } else {
+        // 5. 회원가입 다시 시도하도록 유도
+        alert("회원가입을 다시 시도해주세요.");
+      }
+    } catch (error) {
+      console.log("회원가입 실패", error);
+    }
   };
 
   // 유효성 검사 즉시 실행

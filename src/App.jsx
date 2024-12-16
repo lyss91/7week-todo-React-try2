@@ -13,6 +13,7 @@ import { ThemeProvider } from "./contexts/ThemeContext";
 import Schedule from "./pages/calendar/Schedule";
 import Join from "./pages/member/Join";
 import RangeSchedule from "./pages/calendar/RangeSchedule";
+import Full from "./pages/calendar/Full";
 
 function App() {
   return (
@@ -33,6 +34,8 @@ function App() {
                 <Route path="/schedule" element={<Schedule />} />
                 {/* 스케쥴 range 일정 작업 */}
                 <Route path="/range" element={<RangeSchedule />} />
+                {/* Full 캘린더 */}
+                <Route path="/full" element={<Full />} />
 
                 {/* Todo 중첩 */}
                 <Route path="/todo">

@@ -12,6 +12,11 @@
   "dependencies": {
     "@emotion/react": "^11.13.5",
     "@emotion/styled": "^11.13.5",
+    "@fullcalendar/core": "^6.1.15",
+    "@fullcalendar/daygrid": "^6.1.15",
+    "@fullcalendar/interaction": "^6.1.15",
+    "@fullcalendar/react": "^6.1.15",
+    "@fullcalendar/timegrid": "^6.1.15",
     "@hookform/resolvers": "^3.9.1",
     "axios": "^1.7.9",
     "react": "^18.3.1",
@@ -39,5 +44,6 @@
     "globals": "^15.12.0",
     "prettier": "^3.4.2",
     "vite": "^6.0.1"
-  }
+  },
+  "proxy": "http://192.168.0.66:5000"
 }
