@@ -77,4 +77,4 @@ todo-demo-react
 
 ### 13. 멘토 피드백
 
-# 7week-todo-React-try2
+# [8주차] 2024.12.17 최종 수정 후커밋
